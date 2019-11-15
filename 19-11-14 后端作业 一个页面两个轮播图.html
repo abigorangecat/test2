@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<style>
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.box1 {
+			width: 590px;
+			height: 470px;
+			position: relative;
+			border: 10px solid orange;
+			/*overflow: hidden;*/
+			margin: 20px auto;
+		}
+		.imgs1 {
+			position: absolute;
+			display: flex;
+			top: 0;
+			left: -590px;
+			transition: 1s;
+		}
+		.imgs1 li {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			z-index: -1;
+			transition: 2s;
+		}
+		.imgs1 .show1 {
+			opacity: 1;
+			z-index: 0;
+		}
+		.imgs1 img {
+			display: block;
+			/*vertical-align: middle;*/
+		}
+		.arrows1 span {
+			position: absolute;
+			top: 215px;
+			font-family: "Courier New";
+			background: #000;
+			color: #fff;
+			text-align: center;
+			width: 20px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 36px;
+      cursor: pointer;
+      opacity: 0;
+		}
+		.box1:hover .arrows1 span {
+			opacity: .5;
+		}
+		.box1 .arrows1 span:hover {
+			opacity: 1;
+		}
+		.arrows1 .left {
+			left: 0;
+		}
+		.arrows1 .right {
+			right: 0;
+		}
+		.dots1 {
+			position: absolute;
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			bottom: 20px;
+		}
+		.dots1 li {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			font-size: 20px;
+			background: orange;
+			border-radius: 50%;
+			border: 3px solid #fff;
+			margin: 0 2px;
+			cursor: pointer;
+			transition: 1s linear;
+		}
+		.dots1 .act1 {
+			background: red;
+			color: #fff;
+		}
+
+		.box {
+			width: 590px;
+			height: 470px;
+			position: relative;
+			border: 10px solid orange;
+			overflow: hidden;
+			margin: 20px auto;
+		}
+		.imgs {
+			position: absolute;
+			display: flex;
+			top: 0;
+			left: -590px;
+			transition: 1s;
+		}
+		.imgs img {
+			display: block;
+			/*vertical-align: middle;*/
+		}
+		.arrows span {
+			position: absolute;
+			top: 215px;
+			font-family: "Courier New";
+			background: #000;
+			color: #fff;
+			text-align: center;
+			width: 20px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 36px;
+      cursor: pointer;
+      opacity: 0;
+		}
+		.box:hover .arrows span {
+			opacity: .5;
+		}
+		.box .arrows span:hover {
+			opacity: 1;
+		}
+		.arrows .left {
+			left: 0;
+		}
+		.arrows .right {
+			right: 0;
+		}
+		.dots {
+			position: absolute;
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			bottom: 20px;
+		}
+		.dots li {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			font-size: 20px;
+			background: orange;
+			border-radius: 50%;
+			border: 3px solid #fff;
+			margin: 0 2px;
+			cursor: pointer;
+		}
+		.dots .act {
+			background: red;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="lunbotu1" class="box1">
+		<!-- ul.imgs1>li*5>a[href=#]>img[src=images/$.jpg][alt=$] -->
+		<ul class="imgs1" style="left:0;">
+			<li class="show1"><a href="#"><img src="images/6.jpg" alt="1" width="590" height="470"></a></li>
+			<li><a href="#"><img src="images/7.jpg" alt="2" width="590" height="470"></a></li>
+			<li><a href="#"><img src="images/8.jpg" alt="3" width="590" height="470"></a></li>
+			<li><a href="#"><img src="images/9.jpg" alt="4" width="590" height="470"></a></li>
+			<li><a href="#"><img src="images/10.jpg" alt="5" width="590" height="470"></a></li>
+		</ul>
+		<!-- div.arrows1>span.left{&lt;}+span.right{&gt;} -->
+		<div class="arrows1">
+			<span class="left">&lt;</span>
+			<span class="right">&gt;</span>
+		</div>
+		<!-- ul.dots1>li{$}*5 -->
+		<ul class="dots1">
+			<li class="act1">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+
+	<div id="carousel01" class="box">
+		<!-- ul.imgs>li*5>a[href=#]>img[src=images/$.jpg][alt=$] -->
+		<ul class="imgs" style="left:0;">
+			<li><a href="#"><img src="images/1.jpg" alt="1" width="590" height="470"></a></li>
+			<li><a href="#"><img src="images/2.jpg" alt="2" width="590" height="470"></a></li>
+			<li><a href="#"><img src="images/3.jpg" alt="3" width="590" height="470"></a></li>
+			<li><a href="#"><img src="images/4.jpg" alt="4" width="590" height="470"></a></li>
+			<li><a href="#"><img src="images/5.jpg" alt="5" width="590" height="470"></a></li>
+		</ul>
+		<!-- div.arrows>span.left{&lt;}+span.right{&gt;} -->
+		<div class="arrows">
+			<span class="left">&lt;</span>
+			<span class="right">&gt;</span>
+		</div>
+		<!-- ul.dots>li{$}*5 -->
+		<ul class="dots">
+			<li class="act">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+	<script>
+		// 轮播图主要工作就是调整图片列表的定位（或是显隐）。编写思路，获取index值，根据index值显示对应的图片并设置按钮特殊样式
+  function lbt(id1){
+  		var box1=document.getElementById(id1); // 获取轮播图显示区域
+  		var imgs1Box1=box1.getElementsByClassName('imgs1')[0];// 图片列表区域
+  		var imgs1=imgs1Box1.getElementsByTagName('li'); // 图片列表
+  		var arrowL1=box1.getElementsByClassName('left')[0];// 左箭头
+  		var arrowR1=box1.getElementsByClassName('right')[0];// 右箭头
+  		var dots1=box1.getElementsByClassName('dots1')[0];// 按钮容器
+  		var btns1=dots1.getElementsByTagName('li'); // 按钮列表
+  		var n1=btns1.length; // 图片数量/按钮数量
+  		var index=0; // 当前显示的图片序号，0号开始,范围是[0,n-1]
+  		var t=null; // 定时器变量/标识符
+  		var s=2; // 自动轮播的时间间隔（秒）
+  		// 显示指定index对应的图片
+  		function show1Img1(index) {
+  			for(var i=0;i<n1;i++){
+  				imgs1[i].removeAttribute('class');
+  			}
+  			imgs1[index].className='show1';
+  		}
+  		// 指定index的按钮显示特殊样式
+  		function show1Btn1 (index) {
+  			for(var i=0;i<btns1.length;i++){
+  				btns1[i].removeAttribute('class');
+  			}
+  			btns1[index].className='act1';
+  		}
+  		// 设置右箭头点击事件，。。。
+  		arrowR1.onclick=function(){
+  			index=index<n1-1?index+1:0; //序号的边界判断
+  			show1Img1(index);
+  			show1Btn1(index);
+  		}
+  		// 设置左箭头点击事件，。。。
+  		arrowL1.onclick=function(){
+  			index=index>0?index-1:n1-1; //序号的边界判断
+  			show1Img1(index);
+  			show1Btn1(index);
+  		}
+  		// 设置所有按钮的onmouseover事件，。。。
+  		for(var i=0;i<btns1.length;i++){
+  			btns1[i].idx=i;
+  			btns1[i].onmouseover=function () {
+  				index=this.idx;
+  				show1Btn1(index);
+  				show1Img1(index);
+    	  }
+      }
+  		// 鼠标进入轮播图区域时，停止自动轮播
+  		box1.onmouseover=function () {
+  			clearInterval(t);
+  		}
+  		// 鼠标离开轮播图区域时，继续自动轮播
+  		box1.onmouseout=function () {
+  			t=setInterval(arrowR1.onclick,s*1000);
+  		}
+  		box1.onmouseout(); // 执行一次mouseout操作
+  }
+  lbt('lunbotu1');
+	</script>
+
+	<script>
+		// 轮播图主要工作就是调整图片列表的定位（或是显隐）。编写思路，获取index值，根据index值显示对应的图片并设置按钮特殊样式
+		var box=document.getElementById('carousel01');// 获取轮播图显示区域
+		var imgs=box.getElementsByClassName('imgs')[0];// 图片列表
+		var arrowL=box.getElementsByClassName('left')[0];// 左箭头
+		var arrowR=box.getElementsByClassName('right')[0];// 右箭头
+		var dots=box.getElementsByClassName('dots')[0];// 按钮容器
+		var btns=dots.getElementsByTagName('li');// 按钮列表
+		var imgWidth=590; // 一幅图宽度
+		var n=btns.length; // 图片数量/按钮数量
+		var index=0; // 当前显示的图片序号，0号开始,范围是[0,n-1]
+		var t=null; // 定时器变量/标识符
+		var s=2; // 自动轮播的时间间隔（秒）
+		// 显示指定index对应的图片
+		function showImg(index){
+			imgs.style.left=-1*index*imgWidth+'px';
+		}
+		// 指定index的按钮显示特殊样式
+		function showBtn (index) {
+			for(var i=0;i<btns.length;i++){
+				btns[i].removeAttribute('class');
+			}
+			btns[index].className='act';
+		}
+		// 设置右箭头点击事件，。。。
+		arrowR.onclick=function(){
+			index=index<n-1?index+1:0; //序号的边界判断
+			showImg(index);
+			showBtn(index);
+		}
+		// 设置左箭头点击事件，。。。
+		arrowL.onclick=function(){
+			index=index>0?index-1:n-1; //序号的边界判断
+			showImg(index);
+			showBtn(index);
+		}
+		// 设置所有按钮的点击事件，。。。
+		for(var i=0;i<btns.length;i++){
+			btns[i].idx=i;
+			btns[i].onclick=function () {
+				index=this.idx;
+				showBtn(index);
+				showImg(index);
+			}
+		}
+		// 鼠标进入轮播图区域时，停止自动轮播
+		box.onmouseover=function () {
+			clearInterval(t);
+		}
+		// 鼠标离开轮播图区域时，继续自动轮播
+		box.onmouseout=function () {
+			t=setInterval(arrowR.onclick,s*1000);
+		}
+		box.onmouseout(); // 执行一次mouseout操作
+	</script>
+</body>
+</html>
